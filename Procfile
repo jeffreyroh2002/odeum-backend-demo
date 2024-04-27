@@ -1,1 +1,1 @@
-web: gunicorn react_flask_app.backend.run:app()
+web: gunicorn react_flask_app.backend.run:app
