@@ -1,6 +1,6 @@
 from flask import Flask, Blueprint, request, redirect, session, url_for, current_app, jsonify
-from api import db, login_manager
-from api.models import User, AudioFile, UserAnswer, Test
+from react_flask_app.backend.api import db, login_manager
+from react_flask_app.backend.api.models import User, AudioFile, UserAnswer, Test
 import requests
 import os
 import base64

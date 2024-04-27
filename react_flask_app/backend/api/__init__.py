@@ -4,7 +4,7 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_wtf.csrf import CSRFProtect  # Import CSRFProtect
-from api.config import Config
+from react_flask_app.backend.api.config import Config
 import os
 from flask_cors import CORS
 
@@ -32,13 +32,13 @@ def create_app(config_class=Config):
     csrf.init_app(app)
 
     # section for importing blueprints
-    from api.main.routes import main
-    from api.users.routes import users
-    from api.tests.routes import tests
-    from api.questions.routes import questions
-    from api.results.routes import results
-    from api.spotify.routes import spotify
-    from api.presurvey.routes import presurvey
+    from react_flask_app.backend.api.main.routes import main
+    from react_flask_app.backend.api.users.routes import users
+    from react_flask_app.backend.api.tests.routes import tests
+    from react_flask_app.backend.api.questions.routes import questions
+    from react_flask_app.backend.api.results.routes import results
+    from react_flask_app.backend.api.spotify.routes import spotify
+    from react_flask_app.backend.api.presurvey.routes import presurvey
     
     app.register_blueprint(main)
     app.register_blueprint(users)

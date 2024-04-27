@@ -3,8 +3,8 @@ from flask_login import current_user, login_required, login_user, logout_user
 
 import re  #for signup validation
 
-from api import db, bcrypt
-from api.models import User 
+from react_flask_app.backend.api import db, bcrypt
+from react_flask_app.backend.api.models import User 
 
 users = Blueprint('users', __name__)
 

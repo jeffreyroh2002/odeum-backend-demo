@@ -1,6 +1,4 @@
-import sys
-print(sys.path)
-from api import create_app, db
+from react_flask_app.backend.api import create_app, db
 from dotenv import load_dotenv
 import os
 

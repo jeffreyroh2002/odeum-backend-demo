@@ -1,7 +1,6 @@
 from flask import Blueprint, request, session, redirect, url_for
-from api import db, bcrypt
-from api.models import User, AudioFile, UserAnswer, Test
-#from api.users.forms import RegistrationForm, LoginForm, UpdateAccountForm
+from react_flask_app.backend.api import db, bcrypt
+from react_flask_app.backend.api.models import User, AudioFile, UserAnswer, Test
 from flask_wtf.csrf import generate_csrf
 from flask_login import login_user, current_user, logout_user, login_required
 import logging

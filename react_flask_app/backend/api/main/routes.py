@@ -2,8 +2,8 @@ from flask import Blueprint, jsonify
 
 from flask_wtf.csrf import generate_csrf
 
-from api import db, bcrypt
-from api.models import AudioFile
+from react_flask_app.backend.api import db, bcrypt
+from react_flask_app.backend.api.models import AudioFile
 
 main = Blueprint('main', __name__)
 

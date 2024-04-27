@@ -1,5 +1,5 @@
 from api.models import User, UserAnswer, AudioFile, Test
-from api import db, create_app
+from react_flask_app.backend.api import create_app, db
 
 app = create_app()
 with app.app_context():

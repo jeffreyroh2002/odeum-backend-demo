@@ -1,7 +1,7 @@
 from datetime import datetime
 from itsdangerous import URLSafeTimedSerializer as Serializer
 from flask import current_app
-from api import db, login_manager
+from react_flask_app.backend.api import db, login_manager
 from flask_login import UserMixin
 import openai
 from sqlalchemy.ext.hybrid import hybrid_property
