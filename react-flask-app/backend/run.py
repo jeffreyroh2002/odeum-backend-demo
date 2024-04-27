@@ -1,4 +1,3 @@
-from backend.api import create_app, db
 from dotenv import load_dotenv
 import os
 
