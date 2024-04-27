@@ -1,1 +1,0 @@
-web: gunicorn 'react-flask-app.backend.run:create_app()'
