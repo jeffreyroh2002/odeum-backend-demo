@@ -26,7 +26,7 @@ def create_app(config_class=Config):
     bcrypt.init_app(app)
     login_manager.init_app(app)
     mail.init_app(app)
-    CORS(app)
+    CORS(app, supports_credentials=True, expose_headers=['X-CSRF-Token'])
     
     # Initialize CSRFProtect with the Flask app instance
     csrf.init_app(app)
