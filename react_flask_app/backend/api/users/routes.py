@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request, session
 from flask_login import current_user, login_required, login_user, logout_user
+from flask_cors import cross_origin
 
 import re  #for signup validation
 
@@ -9,6 +10,7 @@ from react_flask_app.backend.api.models import User
 users = Blueprint('users', __name__)
 
 @users.route('/signup', methods=["POST"])
+@cross_origin()
 def signup():
     data = request.json
     # Validate input fields (instead of form.validate_on_submit())
@@ -49,6 +51,7 @@ def signup():
     })
 
 @users.route('/login', methods=["POST"])
+@cross_origin()
 def login():
     data = request.json
 
@@ -75,6 +78,7 @@ def login():
     })
 
 @users.route('/logout', methods=["POST"])
+@cross_origin()
 @login_required  # Require the user to be logged in to access this route
 def logout():
     logout_user()
